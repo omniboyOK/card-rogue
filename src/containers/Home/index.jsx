@@ -1,6 +1,13 @@
 import React, { Component } from "react";
-import { Container, Segment, Input, Grid } from "semantic-ui-react";
+import {
+  Container,
+  Segment,
+  Input,
+  Grid,
+  SegmentGroup,
+} from "semantic-ui-react";
 import HeroeCard from "./HeroeCard";
+import HeroeInfo from "./HeroeInfo";
 
 var heroes = [
   {
@@ -26,26 +33,44 @@ var heroes = [
     portrait: "/heroes/mago.png",
   },
 ];
-
-let cards = heroes.map((heroe) => <HeroeCard heroe={heroe}></HeroeCard>);
-
 class Home extends Component {
-  state = {};
+    constructor(props){
+        super(props)
+        this.state = {
+            info: {}
+        };
+        this.handleInfo = this.handleInfo.bind(this)
+    }
+  
+
+  handleInfo = (hero) => {
+    this.setState({
+        info: hero
+    })
+  }
+
   render() {
+    let cards = heroes.map((heroe, i) => <HeroeCard key={i} heroe={heroe} action={this.handleInfo}></HeroeCard>);
+
     return (
       <Container>
-        <Segment color="red" stacked className="mar">
-          <Grid columns="6">
-            <Grid.Row centered>
-              <Input
-                icon="pencil alternate"
-                placeholder="Escribe tu nombre aqui..."
-              ></Input>
-            </Grid.Row>
+        <SegmentGroup raised horizontal>
+          <Segment color="grey">
+            <Grid columns="6">
+              <Grid.Row centered>
+                <Input
+                  icon="pencil alternate"
+                  placeholder="Escribe tu nombre aqui..."
+                ></Input>
+              </Grid.Row>
 
-            <Grid.Row>{cards}</Grid.Row>
-          </Grid>
-        </Segment>
+              <Grid.Row>{cards}</Grid.Row>
+            </Grid>
+          </Segment>
+          <Segment color="grey">
+            {this.state.info && <HeroeInfo heroe={this.state.info}></HeroeInfo>}
+          </Segment>
+        </SegmentGroup>
       </Container>
     );
   }

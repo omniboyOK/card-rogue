@@ -7,7 +7,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: KenneyBold;
+  src: url(./assets/font/Kenney\ Bold.ttf);
+}
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: KenneyBold, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+

@@ -9,8 +9,9 @@ class HeroeCard extends Component {
         <Card
           color={this.props.heroe.color}
           as="a"
-          image={process.env.PUBLIC_URL + this.props.heroe.portrait}
+          image={this.props.heroe.portrait}
           header={"Jugar como " + this.props.heroe.nombre}
+          onClick={() => this.props.action(this.props.heroe)}
         />
       </Grid.Column>
     );
