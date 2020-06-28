@@ -1,16 +1,24 @@
 import React, { Component } from 'react';
-import { Container, Grid } from 'semantic-ui-react';
+import { Container, SegmentGroup } from 'semantic-ui-react';
+import HeroPanel from './HeroPanel';
+import InfoPanel from './InfoPanel';
+import EnemyPanel from './EnemyPanel';
 
 class Game extends Component {
-    state = {  }
+    constructor(props){
+        super(props)
+        this.state = {
+
+        }
+    }
     render() { 
         return ( 
             <Container>
-                <Grid>
-                    <Grid.Row>
-                        Hi!
-                    </Grid.Row>
-                </Grid>
+                <SegmentGroup horizontal>
+                    <HeroPanel></HeroPanel>
+                    <InfoPanel></InfoPanel>
+                    <EnemyPanel></EnemyPanel>
+                </SegmentGroup>
             </Container>
          );
     }

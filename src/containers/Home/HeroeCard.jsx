@@ -30,6 +30,7 @@ HeroeCard.defaultProps = {
     mana: 0,
     portrait: "/heroes/placeholder.png",
   },
+  visible: false,
 };
 
 export default HeroeCard;

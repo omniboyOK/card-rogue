@@ -8,7 +8,6 @@ import {
 } from "semantic-ui-react";
 import HeroeCard from "./HeroeCard";
 import HeroeInfo from "./HeroeInfo";
-import { Link } from "react-router-dom";
 
 var heroes = [
   {
@@ -38,16 +37,17 @@ class Home extends Component {
     constructor(props){
         super(props)
         this.state = {
-            info: {}
+            info: {},
+            visible: false
         };
         this.handleInfo = this.handleInfo.bind(this);
-        this.handleSelect = this.handleSelect.bind(this);
     }
   
 
   handleInfo = (hero) => {
     this.setState({
-        info: hero
+        info: hero,
+        visible: true
     })
   }
 
@@ -65,12 +65,11 @@ class Home extends Component {
                   placeholder="Escribe tu nombre aqui..."
                 ></Input>
               </Grid.Row>
-
               <Grid.Row>{cards}</Grid.Row>
             </Grid>
           </Segment>
           <Segment color="grey">
-            {this.state.info && <HeroeInfo heroe={this.state.info}></HeroeInfo>}
+            <HeroeInfo heroe={this.state.info} visible={this.state.visible}></HeroeInfo>
           </Segment>
         </SegmentGroup>
       </Container>
