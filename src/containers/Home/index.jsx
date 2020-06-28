@@ -51,10 +51,6 @@ class Home extends Component {
     })
   }
 
-  handleSelect = (hero) => {
-    
-  }
-
   render() {
     let cards = heroes.map((heroe, i) => <HeroeCard key={i} heroe={heroe} action={this.handleInfo}></HeroeCard>);
 
@@ -74,7 +70,7 @@ class Home extends Component {
             </Grid>
           </Segment>
           <Segment color="grey">
-            {this.state.info && <HeroeInfo heroe={this.state.info} select={this.handleSelect}></HeroeInfo>}
+            {this.state.info && <HeroeInfo heroe={this.state.info}></HeroeInfo>}
           </Segment>
         </SegmentGroup>
       </Container>
