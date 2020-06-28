@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Image, Card, Icon, List, Item, Button, Grid } from "semantic-ui-react";
+import { Image, Card, List, Item, Button, Grid } from "semantic-ui-react";
 
 class HeroInfo extends Component {
   state = {};
