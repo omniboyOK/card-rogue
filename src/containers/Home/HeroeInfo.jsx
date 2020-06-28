@@ -29,7 +29,7 @@ class HeroInfo extends Component {
         <Card.Content extra>
           <Grid>
             <Grid.Row centered>
-              <Button>Elegir Heroe</Button>
+              <Button as="a" href="/in-game">Elegir Heroe</Button>
             </Grid.Row>
           </Grid>
         </Card.Content>

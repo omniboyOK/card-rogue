@@ -8,6 +8,7 @@ import {
 } from "semantic-ui-react";
 import HeroeCard from "./HeroeCard";
 import HeroeInfo from "./HeroeInfo";
+import { Link } from "react-router-dom";
 
 var heroes = [
   {
@@ -39,7 +40,8 @@ class Home extends Component {
         this.state = {
             info: {}
         };
-        this.handleInfo = this.handleInfo.bind(this)
+        this.handleInfo = this.handleInfo.bind(this);
+        this.handleSelect = this.handleSelect.bind(this);
     }
   
 
@@ -47,6 +49,10 @@ class Home extends Component {
     this.setState({
         info: hero
     })
+  }
+
+  handleSelect = (hero) => {
+    
   }
 
   render() {
@@ -68,7 +74,7 @@ class Home extends Component {
             </Grid>
           </Segment>
           <Segment color="grey">
-            {this.state.info && <HeroeInfo heroe={this.state.info}></HeroeInfo>}
+            {this.state.info && <HeroeInfo heroe={this.state.info} select={this.handleSelect}></HeroeInfo>}
           </Segment>
         </SegmentGroup>
       </Container>

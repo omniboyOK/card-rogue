@@ -2,12 +2,20 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./containers/App/App";
+import Game from "./containers/Game/";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Switch, Route, BrowserRouter } from "react-router-dom";
+
+const Pages = () => (
+  <Switch>
+    <Route exact path="/" component={App} />
+    <Route path="/in-game" component={Game} />
+  </Switch>
+);
 
 ReactDOM.render(
   <BrowserRouter>
-    <Route path="/" component={App}/>
+    <Route path="/" component={Pages}></Route>
   </BrowserRouter>,
   document.getElementById("root")
 );
