@@ -1,20 +1,22 @@
+[{
+  "nombre": "Guerrero",
+  "color": "red",
+  "ataque": 60,
+  "defensa": 50,
+  "maxVida": 600,
+  "vida": 600,
+  "maxMana": 1000,
+  "mana": 1000,
+  "portrait": "/heroes/guerrero.png"
+},
 {
-  "Guerrero": {
-    "ataque": 60,
-    "defensa": 50,
-    "maxVida": 600,
-    "vida": 600,
-    "maxMana": 1000,
-    "mana": 1000,
-    "portrait": "img/heroes/guerrero.png"
-  },
-  "Mago": {
-    "ataque": 30,
-    "defensa": 20,
-    "maxVida": 400,
-    "vida": 400,
-    "maxMana": 2500,
-    "mana": 2500,
-    "portrait": "img/heroes/mago.png"
-  }
-}
+  "nombre": "Mago",
+  "color": "blue",
+  "ataque": 30,
+  "defensa": 20,
+  "maxVida": 400,
+  "vida": 400,
+  "maxMana": 2500,
+  "mana": 2500,
+  "portrait": "/heroes/mago.png"
+}]

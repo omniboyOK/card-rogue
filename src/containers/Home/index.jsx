@@ -51,6 +51,10 @@ class Home extends Component {
     })
   }
 
+  getHeroes = () => {
+    fetch('/api/getHeroes')
+  }
+
   render() {
     let cards = heroes.map((heroe, i) => <HeroeCard key={i} heroe={heroe} action={this.handleInfo}></HeroeCard>);
 
