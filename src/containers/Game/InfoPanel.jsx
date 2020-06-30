@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Segment } from 'semantic-ui-react';
 
-class HeroPanel extends Component {
+class InfoPanel extends Component {
     state = {  }
     render() { 
         return ( 
@@ -12,4 +12,4 @@ class HeroPanel extends Component {
     }
 }
  
-export default HeroPanel;
+export default InfoPanel;

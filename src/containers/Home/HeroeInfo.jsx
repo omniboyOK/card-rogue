@@ -30,7 +30,7 @@ class HeroInfo extends Component {
           <Card.Content extra>
             <Grid>
               <Grid.Row centered>
-                <Button as="a" href="/in-game">
+                <Button onClick={() => this.props.action(this.props.heroe)}>
                   Elegir Heroe
                 </Button>
               </Grid.Row>

@@ -9,7 +9,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 const Pages = () => (
   <Switch>
     <Route exact path="/" component={App} />
-    <Route path="/in-game" component={Game} />
+    <Route path="/in-game/:id" component={Game} />
   </Switch>
 );
 
