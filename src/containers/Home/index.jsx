@@ -34,7 +34,7 @@ class Home extends Component {
   };
 
   getHeroes = () => {
-    fetch("http://localhost:5024/rpg/getHeroes")
+    fetch("http://localhost:5024/getHeroes")
       .then((response) => {
         return response.json();
       })
@@ -46,7 +46,7 @@ class Home extends Component {
 
   handleSelect = (heroe) => {
     this.setState({ loading: true })
-    fetch("http://localhost:5024/rpg/createGame",
+    fetch("http://localhost:5024/createGame",
     { 
       method: 'POST',
       headers: {
