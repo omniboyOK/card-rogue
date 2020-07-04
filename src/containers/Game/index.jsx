@@ -19,7 +19,7 @@ class Game extends Component {
     }
 
     getGame = (id) => {
-        fetch('http://localhost:5024/getGame?id='+id)
+        fetch('http://localhost:5024/api/getGame?id='+id)
             .then(response => {
                 return response.json();
             })
